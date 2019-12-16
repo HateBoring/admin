@@ -3,7 +3,7 @@ import Router from 'vue-router'
 // import LoginIndex from '@/view/Login'
 import admin from '@/view/admin'
 import index from '@/view/admin/index'
-import Particle from '@/view/admin/article'
+import articleList from '@/view/admin/articleList'
 import user from '@/view/admin/user'
 
 Vue.use(Router)
@@ -26,9 +26,9 @@ export default new Router({
           component: index
         },
         {
-          name: 'Particle',
-          path: '/admin/article',
-          component: Particle
+          name: 'articleList',
+          path: '/admin/articleList',
+          component: articleList
         },
         {
           name: 'user',

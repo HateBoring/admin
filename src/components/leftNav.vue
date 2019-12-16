@@ -5,7 +5,8 @@
       <li v-for="(item,index) in navData" :key="index" @click="getPage(index)" ref="navMenu">
         <div>
           <i :class="item.iconSrc"></i>
-          <span v-show="leftNavStatus">{{item.title}}</span>
+          <!-- {{this.$store.state.isshowleftnavtitle}} -->
+          <span v-if="isShowLeftNavTitle">{{item.title}}</span>
         </div>
       </li>
     </ul>
@@ -15,13 +16,12 @@
 
 <script>
 export default {
-  props: ['leftNavStatus'],
   name: 'leftNav',
   data(){
     return {
       navData: [
         {id: 1,title: '首页',iconSrc: 'el-icon-monitor',path: 'index'},
-        {id: 2,title: '文章',iconSrc: 'el-icon-document',path: 'article'},
+        {id: 2,title: '文章',iconSrc: 'el-icon-document',path: 'articleList'},
         {id: 3,title: '用户',iconSrc: 'el-icon-user',path: 'user'},
         {id: 4,title: '轮播图设置',iconSrc: 'el-icon-camera',path: 'swiper'},
         {id: 5,title: '广告位',iconSrc: 'el-icon-data-line',path: 'banner'},
@@ -30,7 +30,6 @@ export default {
     }
   },
   mounted(){
-
   },
   methods: {
    getPage(index){
@@ -39,14 +38,19 @@ export default {
        navMenu[i].classList.remove('left_nav_active')
      }
      navMenu[index].classList.add('left_nav_active')
-     console.log(this.navData[index])
-     if(this.$route.path == this.navData[index].path){
-       return false
+
+     if(this.$route.name == this.navData[index].path){
+       //应该刷新页面
+        return false
      }else{
        this.$router.push({ name: this.navData[index].path})
      }
-   }
-
+   },
+  },
+  computed: {
+    isShowLeftNavTitle(){
+      return this.$store.state.isshowleftnavtitle
+    }
   }
 }
 </script>

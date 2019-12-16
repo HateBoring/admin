@@ -1,12 +1,12 @@
 <template>
-  <div class="Particle">
-    article
+  <div class="articleList">
+    articleList
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Particle',
+  name: 'articleList',
   data() {
     return {
 

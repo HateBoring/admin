@@ -29,6 +29,7 @@ export default {
         app.style.paddingLeft = '200px'
         this.$emit('isShowLeftNav',true)
       }
+      this.$store.commit('editLeftNavTitleState')
     }
   }
 }
