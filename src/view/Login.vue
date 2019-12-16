@@ -8,6 +8,7 @@
         <i class="el-icon-lock login_icon"></i>
         <input type="password" placeholder="请输入密码">
       </div>
+      <div class="pwd_box"><el-checkbox v-model="isRemPWD">记住密码</el-checkbox></div>
       <div class="login_button">登陆</div>
     </div>
   </div>
@@ -20,6 +21,7 @@ export default {
   name: 'LoginIndex',
   data () {
     return {
+      isRemPWD: false
     }
   },
   mounted(){
@@ -35,6 +37,20 @@ export default {
 @import '../../static/css/demo.css';
 @import '../../static/css/vendors.css';
 
+.login .el-checkbox__inner {
+  background: transparent !important;
+  border-color:rgb(0, 214, 252);
+}
+.login .el-checkbox__input.is-checked .el-checkbox__inner, .el-checkbox__input.is-indeterminate .el-checkbox__inner {
+  border-color:rgb(0, 214, 252);
+  background: rgb(0, 214, 252);
+}
+.login .el-checkbox__input.is-focus .el-checkbox__inner {
+  border-color:rgb(0, 214, 252);
+}
+.login .el-checkbox__input.is-checked+.el-checkbox__label {
+  color: rgb(0, 214, 252);
+}
 .login_box {
   width: 400px;
   height: 300px;
@@ -43,10 +59,10 @@ export default {
   position: fixed;
   left: 50%;
   top: 50%;
-  padding: 20px;
+  padding: 10px 20px;
   box-sizing: border-box;
   margin: -150px 0 0 -200px;
-  border-radius: 20px;
+  border-radius: 6px;
 }
 .login_box .title {
   font-size: 18px;
@@ -80,11 +96,14 @@ export default {
   margin: 0 20px;
   padding: 10px 0;
   text-align: center;
-  border-radius: 5px;
+  border-radius: 4px;
   background: rgba(0, 57, 90, 0.377);
   cursor: pointer;
 }
 .login_button:hover {
   background: rgba(0, 124, 196, 0.377);
+}
+.pwd_box {
+  margin: 0 20px 20px 20px;
 }
 </style>
