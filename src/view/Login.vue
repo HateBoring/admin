@@ -9,7 +9,7 @@
         <input type="password" placeholder="请输入密码">
       </div>
       <div class="pwd_box"><el-checkbox v-model="isRemPWD">记住密码</el-checkbox></div>
-      <div class="login_button">登陆</div>
+      <div class="login_button" @click="getAdmin()">登陆</div>
     </div>
   </div>
 </template>
@@ -28,7 +28,9 @@ export default {
 
   },
   methods: {
-
+    getAdmin(){
+      this.$router.push({ path: '/admin' })
+    }
   }
 }
 </script>
@@ -65,23 +67,23 @@ export default {
 .login input::-webkit-input-placeholder {
   color: rgb(17, 127, 146);
 }
-.login_box {
+.login .login_box {
   position: relative;
   top: 50%;
   margin-top: -200px;
   height: 300px;
 }
-.login_box .title {
+.login .login_box .title {
   font-size: 14px;
   color: rgb(0, 214, 252);
   text-align: center;
 }
-.user_box {
+.login .user_box {
   margin-top: 20px;
   padding: 0 20px;
   box-sizing: border-box;
 }
-.user_box input {
+.login .user_box input {
   display: block;
   width: 100%;
   background: transparent;
@@ -94,12 +96,12 @@ export default {
   letter-spacing: 4px;
   border-bottom: 1px solid rgb(0, 88, 104);
 }
-.login_icon {
+.login .login_icon {
   font-size: 22px;
   color: rgb(0, 214, 252);
   margin-bottom: 10px;
 }
-.login_button {
+.login .login_button {
   color: rgb(0, 178, 209);
   margin: 0 20px;
   padding: 10px 0;
@@ -109,10 +111,10 @@ export default {
   cursor: pointer;
   font-size: 14px;
 }
-.login_button:hover {
+.login .login_button:hover {
   background: rgba(0, 124, 196, 0.377);
 }
-.pwd_box {
+.login .pwd_box {
   margin: 0 20px 20px 20px;
 }
 </style>
