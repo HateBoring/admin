@@ -1,7 +1,7 @@
 <template>
   <div class="login">
     <div class="login_box">
-      <div class="title">—— 后端登陆系统 ——</div>
+      <div class="title">—— Yadmin ——</div>
       <div class="user_box">
         <i class="el-icon-user login_icon"></i>
         <input type="text" placeholder="请输入用户名">
@@ -39,7 +39,7 @@ export default {
 
 .login .el-checkbox__inner {
   background: transparent !important;
-  border-color:rgb(0, 214, 252);
+  border-color:#606266;
 }
 .login .el-checkbox__input.is-checked .el-checkbox__inner, .el-checkbox__input.is-indeterminate .el-checkbox__inner {
   border-color:rgb(0, 214, 252);
@@ -51,21 +51,28 @@ export default {
 .login .el-checkbox__input.is-checked+.el-checkbox__label {
   color: rgb(0, 214, 252);
 }
-.login_box {
+.login {
   width: 400px;
-  height: 300px;
-  background: rgba(0, 0, 0, 0.3);
-  border: 1px solid rgb(0, 88, 104);
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgb(11, 72, 83);
   position: fixed;
   left: 50%;
-  top: 50%;
+  top: 0;
+  height: 100%;
   padding: 10px 20px;
-  box-sizing: border-box;
-  margin: -150px 0 0 -200px;
-  border-radius: 6px;
+  margin-left: -200px;
+}
+.login input::-webkit-input-placeholder {
+  color: rgb(17, 127, 146);
+}
+.login_box {
+  position: relative;
+  top: 50%;
+  margin-top: -200px;
+  height: 300px;
 }
 .login_box .title {
-  font-size: 18px;
+  font-size: 14px;
   color: rgb(0, 214, 252);
   text-align: center;
 }
@@ -80,10 +87,11 @@ export default {
   background: transparent;
   border: none;
   outline: none;
-  font-size: 16px;
+  font-size: 14px;
   margin-bottom: 20px;
   padding-bottom: 5px;
-  color: rgb(0, 156, 184);
+  color: rgb(0, 214, 252);
+  letter-spacing: 4px;
   border-bottom: 1px solid rgb(0, 88, 104);
 }
 .login_icon {
@@ -99,6 +107,7 @@ export default {
   border-radius: 4px;
   background: rgba(0, 57, 90, 0.377);
   cursor: pointer;
+  font-size: 14px;
 }
 .login_button:hover {
   background: rgba(0, 124, 196, 0.377);
