@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-// import LoginIndex from '@/view/Login'
+import LoginIndex from '@/view/Login'
 import admin from '@/view/admin'
 import index from '@/view/admin/index'
 import articleList from '@/view/admin/articleList'
