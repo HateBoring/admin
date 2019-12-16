@@ -1,19 +1,16 @@
 <template>
-  <div class="admin">
-    <router-view/>
+  <div class="index">
+    index
   </div>
 </template>
 
 <script>
 export default {
-  name: 'admin',
+  name: 'index',
   data() {
     return {
 
     }
-  },
-  methods: {
-   
   }
 }
 </script>

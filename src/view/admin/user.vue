@@ -1,19 +1,16 @@
 <template>
-  <div class="admin">
-    <router-view/>
+  <div class="user">
+    user
   </div>
 </template>
 
 <script>
 export default {
-  name: 'admin',
+  name: 'user',
   data() {
     return {
 
     }
-  },
-  methods: {
-   
   }
 }
 </script>

@@ -1,19 +1,16 @@
 <template>
-  <div class="admin">
-    <router-view/>
+  <div class="Particle">
+    article
   </div>
 </template>
 
 <script>
 export default {
-  name: 'admin',
+  name: 'Particle',
   data() {
     return {
 
     }
-  },
-  methods: {
-   
   }
 }
 </script>
