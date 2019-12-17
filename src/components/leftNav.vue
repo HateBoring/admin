@@ -10,7 +10,7 @@
         </div>
       </li>
     </ul>
-    <div class="desc">Yadmin后台管理系统v1.0.0</div>
+    <div class="desc" v-if="isShowLeftNavTitle">Yadmin后台管理系统v1.0.0</div>
   </div>
 </template>
 
@@ -91,8 +91,7 @@ export default {
   font-size: 22px;
 }
 .left_nav ul li:hover {
-  color: rgb(0, 132, 255);
-  background: rgba(255, 255, 255,0.1);
+  color: rgb(130, 194, 255);
 }
 .left_nav .desc {
   position: fixed;

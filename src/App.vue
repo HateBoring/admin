@@ -3,7 +3,9 @@
     <leftNav :leftNavStatus="isShowLeftNav"></leftNav>
     <div class="main">
       <appTop @isShowLeftNav="updateLeftNav"></appTop>
-      <router-view/>
+      <div class="content">
+        <router-view/>
+      </div>
     </div>
   </div>
 </template>
@@ -46,5 +48,21 @@ body {
   position: relative;
   padding-left: 200px;
   height: 100%;
+}
+.main {
+  position: relative;
+  padding-top: 80px;
+  height: 100%;
+  box-sizing: border-box;
+}
+.main .content {
+  padding: 20px;
+  margin-left: 20px;
+  color: #fff;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  border-top: 1px solid rgba(254, 255, 255, 0.322);
+  border-left: 1px solid rgba(254, 255, 255, 0.322);
+  box-sizing: border-box;
 }
 </style>

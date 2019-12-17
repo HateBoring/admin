@@ -37,7 +37,11 @@ export default {
 
 <style scoped>
 .app_top {
+  position: absolute;
+  top: 0;
+  left: 0;
   height: 60px;
+  width: 100%;
   line-height: 60px;
   background: rgba(0, 0, 0, 0.3);
   color: #fff;
